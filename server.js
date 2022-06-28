@@ -6,7 +6,19 @@ const PORT = process.env.port || 3001;
 const exphbs = require('express-handlebars');
 const pData = require("./modules/productData.js"); 
 
-app.engine('.hbs', exphbs.engine({extname: '.hbs'}));
+app.engine('.hbs', exphbs.engine({
+    extname: '.hbs',
+    helpers: {
+        strong: function(options){
+            return '<strong>' + options.fn(this) + '</strong>';
+        },
+        priceFormat: function(options) {
+            return new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(
+                options.fn(this) / 100);
+        }   
+    }
+}));
+
 app.set("view engine", ".hbs");
 
 var options = {

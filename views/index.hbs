@@ -5,7 +5,7 @@
     <!-- Change this to your name-->
     <meta name="Amnish Singh Arora" content="Web Store" />
 
-    <title>WEB222 Store</title>
+    <title>GamesForGeeks</title>
     <!-- Classless CSS Stylesheet - https://oxal.org/projects/sakura/ -->
     <link rel="stylesheet" href="./css/sakura.css" type="text/css" />
     <link rel="stylesheet" href="./css/myStyle.css" type="text/css" />
@@ -19,12 +19,11 @@
         &lsquo;GamesForGeeks&rsquo; where we sell all kinds of Video Games, Consoles, and Accessories
         that a real Geek could ever desire at the best prices!
       </p>
-    </header>
-
-    <nav id="menu">
+      <nav id="menu">
       <!-- Dynamically create your menu category buttons here -->
       <!-- <button id="hidden">Show Hidden Data</button> -->
-    </nav>
+      </nav>
+    </header>
 
     <hr />
 
@@ -43,7 +42,11 @@
                         <div class="lowerCard">
                             <h3>{{title}}</h3>
                             <p>{{description}}</p>
-                            <span>{{price}}</span>
+                            <span>
+                                {{#priceFormat}}
+                                    {{price}}
+                                {{/priceFormat}}
+                            </span>
                         </div>
                     </div>
                 {{/unless}}
