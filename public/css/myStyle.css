@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* General Styling */
+button {
+  transition: 0.5s;
+  width: 110px;
+}
+
+nav {
+    margin-left: 68px;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+}
+
+footer * {
+  display: inline-block;
+}
+
+footer hr {
+  width: 100px;
+  margin: 0 2em;
+}
+
+/* Card Styling */
+
+/* .category-products {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    flex-wrap: nowrap;
+} */
+
+div.card {
+  width: 330px;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s;
+  float: left;
+  position: relative;
+}
+
+.lowerCard {
+  padding: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 1); /* Last value is for opacity */
+}
+
+.cardImage {
+  margin: 0px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 250px;
+  width: 330px;
+}
+
+.card h3 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: larger;
+}
+
+.card p {
+  text-align: center;
+  margin: 0px;
+  padding: 0 5px;
+  word-wrap: break-word;
+  line-height: 1.3em;
+  font-family: Montserrat, "Times New Roman", "Arial";
+  height: 150px;
+  overflow-y: auto;
+}
+
+.card span {
+  margin: 0px;
+  margin-left: 7px;
+  font-weight: bolder;
+  text-decoration: underline;
+}

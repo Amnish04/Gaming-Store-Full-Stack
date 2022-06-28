@@ -1,0 +1,7 @@
+[
+  { "id": "c1", "name": "Consoles" },
+  { "id": "c2", "name": "Laptops" },
+  { "id": "c3", "name": "Games" },
+  { "id": "c4", "name": "PC Components" },
+  { "id": "c5", "name": "Accessories" }
+]
