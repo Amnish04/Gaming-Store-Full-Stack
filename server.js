@@ -8,6 +8,8 @@ const pData = require("./modules/productData.js");
 
 app.engine('.hbs', exphbs.engine({
     extname: '.hbs',
+    layoutsDir: __dirname+"/views/layouts",
+    partialsDir: __dirname+"/views/partials",
     helpers: {
         strong: function(options){
             return '<strong>' + options.fn(this) + '</strong>';
@@ -30,7 +32,7 @@ app.get("/", (req, res) => {
     .then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     })
     .catch((err) => {
@@ -42,7 +44,7 @@ app.get("/Consoles", (req, res) => {
     pData.getProductsByCategory("c1").then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     }).catch((err) => {
         console.log(err);
@@ -53,7 +55,7 @@ app.get("/Laptops", (req, res) => {
     pData.getProductsByCategory("c2").then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     }).catch((err) => {
         console.log(err);
@@ -64,7 +66,7 @@ app.get("/Games", (req, res) => {
     pData.getProductsByCategory("c3").then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     }).catch((err) => {
         console.log(err);
@@ -75,7 +77,7 @@ app.get("/PC%20Components", (req, res) => {
     pData.getProductsByCategory("c4").then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     }).catch((err) => {
         console.log(err);
@@ -85,7 +87,7 @@ app.get("/Accessories", (req, res) => {
     pData.getProductsByCategory("c5").then(function(data) {
         res.render('index', {
             data: data,
-            layout: false // do not use the default Layout (main.hbs)
+            layout: "mainLayout" // do not use the default Layout (main.hbs)
         });
     }).catch((err) => {
         console.log(err);
@@ -101,7 +103,6 @@ pData.initializeContent()
 .catch((msg) => {
     console.log(msg);
 })
-
 
 /* Doubt */
 /*
